@@ -7,8 +7,7 @@ import { ThemeProvider } from './containers/ThemeContext';
 import Background from './containers/Background';
 import Toggle from './containers/ThemeToggle';
 import Setting from './containers/Setting';
-import { Example } from './components/menu/example';
-
+import { Example } from './components/menu/example.jsx'
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider>

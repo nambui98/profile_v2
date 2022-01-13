@@ -23,7 +23,7 @@ function App() {
             </div>
           </div>
           <div className="rounded-3xl w-4/12 md:flex sm:hidden smx:hidden h-full mx-4 bg-app shadow-3xl dark:bg-neutral-800 dark:shadow-3xl-dark flex items-center flex-col py-10 px-6">
-            <div className="wrap-avatar dark:wrap-avatar-dark">
+            <div className="wrap-avatar dark:wrap-avatar">
               <div className="avatar">
                 <img src={Avatar} alt="" />
               </div>

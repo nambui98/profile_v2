@@ -3,23 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ThemeProvider } from './containers/ThemeContext';
-import Background from './containers/Background';
-import Toggle from './containers/ThemeToggle';
-import Setting from './containers/Setting';
-import { Example } from './components/menu/example';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider>
-      <Background>
-        <div className="fixed right-0 top-0 mr-4 mt-2 md:mt-6 z-10">
-          <Setting />
-        </div>
-        <Example />
-        <App />
-      </Background>
-    </ThemeProvider>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
