@@ -1,15 +1,20 @@
 import * as React from "react";
 import { motion } from "framer-motion";
+import { ThemeContext } from "../../containers/ThemeContext";
 
-const Path = props => (
-  <motion.path
-    fill="#fff"
-    strokeWidth="3"
-    stroke="#fff"
-    strokeLinecap="round"
-    {...props}
-  />
-);
+const Path = props => {
+  const { theme, setTheme } = React.useContext(ThemeContext);
+  return (
+
+    <motion.path
+      fill=""
+      strokeWidth="3"
+      stroke={theme === 'dark' ? "#fff" : "#262626"}
+      strokeLinecap="round"
+      {...props}
+    />
+  )
+};
 
 export const MenuToggle = ({ toggle }) => (
   <button onClick={toggle} className="btn-shadow dark:btn-shadow-dark t-8">

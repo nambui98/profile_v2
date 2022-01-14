@@ -11,7 +11,7 @@ export default function Setting() {
         <button className="btn-shadow dark:btn-shadow-dark-50 bg-app dark:bg-neutral-800 setting -left-56 top-8 rounded-full text-center w-10 h-10" onClick={() => setActive(!active)}>
             <FaRegSun class="animate-spin duration-1000 text-3xl" style={{ animationDuration: "2s" }} fill={colors.coolGray[400]} />
         </button>
-        <div className={`absolute top-0 right-0 rounded-3xl flex justify-between p-7 shadow-3xl bg-app dark:bg-neutral-800 dark:shadow-4xl`} >
+        <div className={`absolute top-0 right-0 rounded-3xl flex justify-between p-7 shadow-3xl bg-app dark:bg-neutral-800 dark:shadow-3xl-dark`} >
             {/* <div className={`absolute `}> */}
 
             <button className="mr-2 btn-shadow dark:btn-shadow-dark-50 btn-setting rounded-full text-center w-12 h-12" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
