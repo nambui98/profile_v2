@@ -85,6 +85,7 @@
     // width: 50px;
     // height: 50px;
     cursor: pointer;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -313,9 +314,6 @@
             -3px -3px 3px #fff
         }
     }
-}
-.t-8{
-    top:2rem;
 }
 }
 .bg-app{

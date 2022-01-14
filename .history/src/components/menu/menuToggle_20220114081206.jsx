@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 const Path = props => (
   <motion.path
-    fill="#fff"
+    fill="transparent"
     strokeWidth="3"
-    stroke="#fff"
+    stroke="hsl(0, 0%, 18%)"
     strokeLinecap="round"
     {...props}
   />
@@ -13,9 +13,8 @@ const Path = props => (
 
 export const MenuToggle = ({ toggle }) => (
   <button onClick={toggle} className="btn-shadow dark:btn-shadow-dark t-8">
-    <svg width="23" height="23" viewBox="0 0 23 23" fill="#fff">
+    <svg width="23" height="23" viewBox="0 0 23 23">
       <Path
-        fill="#fff"
         variants={{
           closed: { d: "M 2 2.5 L 20 2.5" },
           open: { d: "M 3 16.5 L 17 2.5" }
