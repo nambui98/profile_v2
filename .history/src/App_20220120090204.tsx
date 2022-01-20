@@ -6,16 +6,21 @@ import { Avatar } from './assets';
 const colors = require('tailwindcss/colors')
 function App() {
   const [top, setTop] = useState(0);
-  const [left, setLeft] = useState(0);
+  const [right, setRight] = useState(0);
   useEffect(() => {
     window.addEventListener("mousemove", (e) => {
+      const cursor = document.querySelector(".cursor");
       setTop(e.pageY);
-      setLeft(e.pageX);
+      setRight(e.pageX);
+      // cursor?.style.top = e.pageY;
+      // cursor?.style.right = e.pageX;
+      console.log(cursor, e);
+
     })
   }, [])
   return (
     <div className="App">
-      <div className="cursor" style={{ top: top, left: left }}></div>
+      <div className="cursor" style={{ top: top, right: right }}></div>
       <div className="flex h-screen w-screen items-center justify-center">
         <div className="flex w-full items-start justify-center" style={{ height: "600px" }}>
           <div className="relative rounded-3xl md:w-6/12 sm:w-10/12 smx:w-10/12 p-6 h-full mx-4 bg-app dark:bg-neutral-800 shadow-3xl dark:shadow-3xl-dark flex justify-center items-center flex-col">

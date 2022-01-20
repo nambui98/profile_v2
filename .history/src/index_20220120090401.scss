@@ -6,9 +6,6 @@
     padding: 0;
     margin: 0;
 }
-body{
-    cursor: none;
-}
 @layer utilities {
     .btn-shadow{
     box-shadow: 3px 3px 8px #b1b1b1,
@@ -250,6 +247,8 @@ body{
 .btn-shadow-darklight{
     box-shadow: 3px 3px 8px #b1b1b1,
                 -3px -3px 8px #fff;
+    // width: 50px;
+    // height: 50px;
     cursor: pointer;
     position: relative;
     display: flex;
@@ -336,6 +335,11 @@ body{
 .bg-app{
     background-color: #ecf0f3;
 }
+
+
+
+
+
 .setting{
     position: absolute !important;
 }

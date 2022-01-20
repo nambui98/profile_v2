@@ -9,8 +9,13 @@ function App() {
   const [left, setLeft] = useState(0);
   useEffect(() => {
     window.addEventListener("mousemove", (e) => {
+      const cursor = document.querySelector(".cursor");
       setTop(e.pageY);
       setLeft(e.pageX);
+      // cursor?.style.top = e.pageY;
+      // cursor?.style.right = e.pageX;
+      console.log(cursor, e);
+
     })
   }, [])
   return (
