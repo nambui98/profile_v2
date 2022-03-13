@@ -17,12 +17,12 @@ function App() {
   const location = useLocation();
   const [top, setTop] = useState(0);
   const [left, setLeft] = useState(0);
-  // useEffect(() => {
-  //   window.addEventListener("mousemove", (e) => {
-  //     setTop(e.pageY);
-  //     setLeft(e.pageX);
-  //   })
-  // }, [])
+  useEffect(() => {
+    window.addEventListener("mousemove", (e) => {
+      setTop(e.pageY);
+      setLeft(e.pageX);
+    })
+  }, [])
   return (
 
     <div className="App">

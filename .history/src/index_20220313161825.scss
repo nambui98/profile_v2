@@ -7,7 +7,7 @@
     margin: 0;
 }
 body{
-    // cursor: none;
+    cursor: none;
     overflow: hidden;
 }
 @layer utilities {
@@ -340,14 +340,14 @@ body{
 
   transition: opacity 250ms ease-out, transform 300ms ease;
 }
-// .cursor{
-//     position: absolute;
-//     width: 3em;
-//     height: 3em;
-//     border: 2px solid black;
-//     border-radius: 50%;
-//     z-index: 1000;
-//     transform: translate(-50%, -50%);
-//     pointer-events: none;
-//     transition: .2s all;
-// }
+.cursor{
+    position: absolute;
+    width: 3em;
+    height: 3em;
+    border: 2px solid black;
+    border-radius: 50%;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: .3s all;
+}
