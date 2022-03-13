@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, NavLink, Routes, useLocation } from 'react-router-dom'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
-
+import "./packages/react-router-dom/examples/Animation/styles.css";
 import Home from './pages/home'
 import Contact from './pages/contact'
 import { Avatar } from './assets';
@@ -22,7 +22,7 @@ function App() {
         <div className="flex w-full items-start justify-center" style={{ height: "600px" }}>
           <TransitionGroup component={null}>
 
-            <CSSTransition key={location.key} classNames="fade" timeout={1000}>
+            <CSSTransition key={location.key} classNames="fade" timeout={300}>
               <Routes location={location}>
                 {
                   routes.map(({ path, Component }) => (<Route path={path} element={Component} />))

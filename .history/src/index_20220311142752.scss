@@ -6,13 +6,10 @@
     padding: 0;
     margin: 0;
 }
-body{
-    overflow: hidden;
-}
 @layer utilities {
     .btn-shadow{
-    box-shadow: 6px 6px 12px #cbced1,
-             -6px -6px 12px #ffffff;
+    box-shadow: 3px 3px 8px #b1b1b1,
+                -3px -3px 8px #fff;
     // width: 50px;
     // height: 50px;
     cursor: pointer;
@@ -29,14 +26,6 @@ body{
     svg{
         transition: all 0.3s ease-in-out;
     }
-    a{
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 100;
-    }
     &::after{
         content: '';
         transition: opacity 0.3s ease-in-out;
@@ -49,8 +38,8 @@ body{
         opacity: 0;
         border-radius: inherit;
         outline:none;
-        box-shadow:inset 6px 6px 12px #cbced1,
-                inset -6px -6px 12px #fff;
+        box-shadow:inset 3px 3px 8px #b1b1b1,
+                inset -3px -3px 8px #fff;
 
     }  
     &.fb{
@@ -131,41 +120,7 @@ body{
     }
     }
 }
-.btn-shadow-dark{
-    &.fb{
-        &:hover{
-            box-shadow:none;
-            &::after{
-                opacity: 1;
-            }
-            svg{
-                fill: #4267B2;
-            }
-        }
-    }      
-     &.itg{
-        &:hover{
-            box-shadow:none;
-            &::after{
-                opacity: 1;
-            }
-            svg{
-                fill: #e74c3c;
-            }
-        }
-    } 
-    &.gg{
-        &:hover{
-            box-shadow:none;
-            &::after{
-                opacity: 1;
-            }
-            svg{
-                fill: #4267B2;
-            }
-        }
-    }      
-}
+
 .btn-shadow-darklight{
     box-shadow: 3px 3px 8px #b1b1b1,
                 -3px -3px 8px #fff;
@@ -210,39 +165,6 @@ body{
             }
         }
     }
-    &.fb{
-        &:hover{
-            box-shadow:none;
-            &::after{
-                opacity: 1;
-            }
-            svg{
-                fill: #4267B2;
-            }
-        }
-    }      
-     &.itg{
-        &:hover{
-            box-shadow:none;
-            &::after{
-                opacity: 1;
-            }
-            svg{
-                fill: #e74c3c;
-            }
-        }
-    } 
-    &.gg{
-        &:hover{
-            box-shadow:none;
-            &::after{
-                opacity: 1;
-            }
-            svg{
-                fill: #4267B2;
-            }
-        }
-    }      
 }
 .wrap-avatar{
     display: flex;
@@ -304,7 +226,7 @@ body{
     padding: 0.7em 1.7em;
     font-size: 18px;
     border-radius: 0.5em;
-    background: #ecf0f3;
+    background: #fff;
     border: 1px solid #e8e8e8;
     transition: all .3s;
     box-shadow: 6px 6px 12px #c5c5c5,
@@ -314,35 +236,4 @@ body{
  box-shadow: inset 4px 4px 12px #c5c5c5,
              inset -4px -4px 12px #ffffff;
                 }
-}
-// .fade-enter {
-//   opacity: 0;
-//   z-index: 1;
-// }
-
-// .fade-enter.fade-enter-active {
-//   opacity: 1;
-//   transition: opacity 250ms ease-in;
-// }
-
-.fade-enter {
-  opacity: 0;
-  transform: translate(0, 25px);
-  z-index: 1;
-}
-.fade-enter.fade-enter-active {
-  opacity: 1;
-  transform: translate(0, 0);
-
-  transition: opacity 250ms ease-out, transform 300ms ease;
-}
-.fade-exit {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-.fade-exit.fade-exit-active {
-  opacity: 0;
-  transform: translate(0, 30px);
-
-  transition: opacity 250ms ease-out, transform 300ms ease;
 }

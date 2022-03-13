@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, NavLink, Routes, useLocation } from 'react-router-dom'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
-
 import Home from './pages/home'
 import Contact from './pages/contact'
 import { Avatar } from './assets';
@@ -22,7 +21,7 @@ function App() {
         <div className="flex w-full items-start justify-center" style={{ height: "600px" }}>
           <TransitionGroup component={null}>
 
-            <CSSTransition key={location.key} classNames="fade" timeout={1000}>
+            <CSSTransition key={location.key} classNames="fade" timeout={300}>
               <Routes location={location}>
                 {
                   routes.map(({ path, Component }) => (<Route path={path} element={Component} />))
@@ -40,7 +39,7 @@ function App() {
             <h1 className="text-black dark:text-white font-extrabold tracking-widest text-3xl mt-5">Nam Bùi</h1>
             <h1 className="text-gray-400 dark:text-white font-extrabold tracking-max text-xl">FRONT END DEV</h1>
             <ul>
-              <li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5"><Link to="/">Home</Link></li>
+              <li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5">Home</li>
               <li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5">About</li>
               <li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5"><a href="https://namportfolio.netlify.app/" target="_blank" rel="noreferrer">Portfolio</a> </li>
               <li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5"><a href="https://web3-blog.netlify.app/" target="_blank" rel="noreferrer">Blog</a> </li>

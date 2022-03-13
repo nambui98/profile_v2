@@ -22,7 +22,7 @@ function App() {
         <div className="flex w-full items-start justify-center" style={{ height: "600px" }}>
           <TransitionGroup component={null}>
 
-            <CSSTransition key={location.key} classNames="fade" timeout={1000}>
+            <CSSTransition key={location.key} classNames="fade" timeout={300}>
               <Routes location={location}>
                 {
                   routes.map(({ path, Component }) => (<Route path={path} element={Component} />))

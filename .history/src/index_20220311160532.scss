@@ -6,9 +6,6 @@
     padding: 0;
     margin: 0;
 }
-body{
-    overflow: hidden;
-}
 @layer utilities {
     .btn-shadow{
     box-shadow: 6px 6px 12px #cbced1,
@@ -315,16 +312,6 @@ body{
              inset -4px -4px 12px #ffffff;
                 }
 }
-// .fade-enter {
-//   opacity: 0;
-//   z-index: 1;
-// }
-
-// .fade-enter.fade-enter-active {
-//   opacity: 1;
-//   transition: opacity 250ms ease-in;
-// }
-
 .fade-enter {
   opacity: 0;
   transform: translate(0, 25px);
