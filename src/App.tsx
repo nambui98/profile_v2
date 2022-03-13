@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, NavLink, Routes, useLocation } from 'react-router-dom'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
 import Home from './pages/home'
 import Contact from './pages/contact'
+=======
+import React, { useEffect, useState } from 'react';
+import logo from './logo.svg';
+import { FaFacebookF, FaFilePdf, FaGoogle, FaInstagram, FaInstagramSquare, FaPrint, FaRegSun } from "react-icons/fa";
+import './App.scss';
+>>>>>>> 148bd848dbd0201e18bb2e7e441fa204bed5d71b
 import { Avatar } from './assets';
 
 import './App.scss';
@@ -14,10 +21,22 @@ const routes = [
   { path: '/contact', name: 'Contact', Component: <Contact /> },
 ]
 function App() {
+<<<<<<< HEAD
   const location = useLocation();
+=======
+  const [top, setTop] = useState(0);
+  const [left, setLeft] = useState(0);
+  useEffect(() => {
+    window.addEventListener("mousemove", (e) => {
+      setTop(e.pageY);
+      setLeft(e.pageX);
+    })
+  }, [])
+>>>>>>> 148bd848dbd0201e18bb2e7e441fa204bed5d71b
   return (
 
     <div className="App">
+      <div className="cursor" style={{ top: top, left: left }}></div>
       <div className="flex h-screen w-screen items-center justify-center">
         <div className="flex w-full items-start justify-center" style={{ height: "600px" }}>
           <TransitionGroup component={null}>
