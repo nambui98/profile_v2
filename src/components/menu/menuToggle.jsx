@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ThemeContext } from "../../containers/ThemeContext";
 
 const Path = props => {
+  //@typescript-eslint/no-unused-vars
   const { theme, setTheme } = React.useContext(ThemeContext);
   return (
 
