@@ -5,6 +5,7 @@ import './App.scss';
 import { Avatar } from './assets';
 import Contact from './pages/contact';
 import Home from './pages/home';
+import Work from './pages/Work';
 
 
 
@@ -12,6 +13,7 @@ const routes = [
   { path: '*', name: 'Home', Component: <Home /> },
   { path: '/', name: 'Home', Component: <Home /> },
   { path: '/contact', name: 'Contact', Component: <Contact /> },
+  { path: '/work', name: 'Work', Component: <Work /> },
 ]
 function App() {
   const location = useLocation();
@@ -50,7 +52,7 @@ function App() {
             <h1 className="text-gray-400 dark:text-white font-extrabold tracking-max text-xl">FRONT END DEV</h1>
             <ul>
               <li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5"><Link to="/">Home</Link></li>
-              <li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5">About</li>
+              <li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5"><Link to="/work">Work</Link></li>
               <li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5"><a href="https://namportfolio.netlify.app/" target="_blank" rel="noreferrer">Portfolio</a> </li>
               <li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5"><a href="https://web3-blog.netlify.app/" target="_blank" rel="noreferrer">Blog</a> </li>
               <li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5"><Link to="/contact">Contact</Link> </li>

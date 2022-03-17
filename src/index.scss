@@ -12,8 +12,8 @@ body{
 }
 @layer utilities { 
     .btn-shadow{
-    box-shadow: 6px 6px 12px #cbced1,
-             -6px -6px 12px #ffffff;
+    box-shadow: 3px 3px 3px #cbced1,
+             -3px -3px 3px #fafafa;
     // width: 50px;
     // height: 50px;
     cursor: pointer;
@@ -50,8 +50,8 @@ body{
         opacity: 0;
         border-radius: inherit;
         outline:none;
-        box-shadow:inset 6px 6px 12px #cbced1,
-                inset -6px -6px 12px #fff;
+        box-shadow:inset 3px 3px 3px #cbced1,
+                inset -3px -3px 3px #fafafa;
 
     }  
     &.fb{
@@ -97,18 +97,18 @@ body{
         }
     }
     &-dark{
-        box-shadow: 5px 5px 10px #202020,
-             -5px -5px 10px #2c2c2c;
+        box-shadow: 3px 3px 3px #202020,
+             -3px -3px 3px #2c2c2c;
         &::after{
-            box-shadow:inset 5px 5px 10px #202020,
-        inset -5px -5px 10px #2c2c2c;
+            box-shadow:inset 3px 3px 3px #202020,
+        inset -3px -3px 3px #2c2c2c;
         }
         &-50{
             box-shadow:  4px 4px 8px #202020,
                         -4px -4px 8px #2c2c2c;
                         &::after{
-            box-shadow:inset 5px 5px 10px #202020,
-        inset -5px -5px 10px #2c2c2c;
+            box-shadow:inset 3px 3px 3px #202020,
+        inset -3px -3px 3px #2c2c2c;
          
         }
          &:hover{
@@ -257,10 +257,10 @@ body{
     /* top left */
     inset -3px -3px 3px #fff;
     &-dark{
-        box-shadow: inset 5px 5px 10px #202020, inset -5px -5px 10px #2c2c2c;
+        box-shadow: inset 3px 3px 3px #202020, inset -3px -3px 3px #2c2c2c;
         img{
-            box-shadow: 5px 5px 10px #202020,
-             -5px -5px 10px #2c2c2c;
+            box-shadow: 3px 3px 3px #202020,
+             -3px -3px 3px #2c2c2c;
         }
     }
     .avatar{
@@ -301,12 +301,12 @@ body{
     background: #ecf0f3;
     border: 1px solid #e8e8e8;
     transition: all .3s;
-    box-shadow: 6px 6px 12px #c5c5c5,
-                -6px -6px 12px #ffffff;
+    box-shadow: 3px 3px 3px #c5c5c5,
+                -3px -3px 3px #fafafa;
                 &:hover{
                     color: #666;
  box-shadow: inset 4px 4px 12px #c5c5c5,
-             inset -4px -4px 12px #ffffff;
+             inset -4px -4px 12px #fafafa;
                 }
 }
 // .fade-enter {
@@ -321,24 +321,31 @@ body{
 
 .fade-enter {
   opacity: 0;
-  transform: translate(0, 25px);
-  z-index: 1;
+//   transform-style: preserve-3d;
+//   transform: translate(-100%, 0) scale(0) ;
+     transform-origin: left;
+
+    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(.5);
+    z-index: 1;
 }
 .fade-enter.fade-enter-active {
   opacity: 1;
   transform: translate(0, 0);
+    // transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(.5);
 
-  transition: opacity 250ms ease-out, transform 300ms ease;
+  transition: opacity 700ms ease-in-out, transform 1000ms ease-in-out;
 }
 .fade-exit {
+    position: absolute;
   opacity: 1;
-  transform: translate(0, 0);
+//   transform: translateX(-100%);
 }
 .fade-exit.fade-exit-active {
   opacity: 0;
-  transform: translate(0, 30px);
+//   transform: translate(0, 30px);
+  display: none;
 
-  transition: opacity 250ms ease-out, transform 300ms ease;
+  transition: all 250ms ease-out, transform 300ms ease;
 }
 // .cursor{
 //     position: absolute;
