@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, Route, Routes, useLocation } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import './App.scss';
@@ -15,8 +15,8 @@ const routes = [
 ]
 function App() {
   const location = useLocation();
-  // const [top, setTop] = useState(0);
-  // const [left, setLeft] = useState(0);
+  const [top, setTop] = useState(0);
+  const [left, setLeft] = useState(0);
   // useEffect(() => {
   //   window.addEventListener("mousemove", (e) => {
   //     setTop(e.pageY);
@@ -26,7 +26,7 @@ function App() {
   return (
 
     <div className="App">
-      {/* <div className="cursor" style={{ top: top, left: left }}></div> */}
+      <div className="cursor" style={{ top: top, left: left }}></div>
       <div className="flex h-screen w-screen items-center justify-center">
         <div className="flex w-full items-start justify-center" style={{ height: "600px" }}>
           <TransitionGroup component={null}>
