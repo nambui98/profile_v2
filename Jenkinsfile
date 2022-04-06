@@ -20,8 +20,7 @@ pipeline {
     // }
 
     stage("build") {
-        // agent { node { label 'labelName' } }
-        agent none
+        agent { node { label 'main' } }
         environment {
             DOCKER_TAG="${GIT_BRANCH}-${GIT_COMMIT}"
         }
