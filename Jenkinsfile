@@ -21,7 +21,7 @@ pipeline {
 
     stage("build") {
       environment {
-        DOCKER_TAG="nam"
+        DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
       }
       steps {
         sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} . "
