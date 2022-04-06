@@ -11,7 +11,7 @@ pipeline {
       agent {
           docker {
             image 'node:lts-bullseye-slim' 
-            args '-u root' 
+            args '-u root -v /tmp:/root/.cache' 
           }
       }
       steps {
