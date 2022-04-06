@@ -26,6 +26,7 @@ function App() {
   //   })
   // }, [])
   return (
+
     <div className="App">
       {/* <div className="cursor" style={{ top: top, left: left }}></div> */}
       <div className="flex h-screen w-screen items-center justify-center">
