@@ -4,7 +4,6 @@ pipeline {
 
   environment {
     DOCKER_IMAGE = "nambui98/react-docker"
-    GIT_BRANCH="main"
   }
 
   stages {
