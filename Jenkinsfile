@@ -5,7 +5,6 @@ pipeline {
   environment {
     DOCKER_IMAGE = "nambui98/react-docker"
     GIT_BRANCH="main"
-    RELEASE_NOTES = sh(script: """git log --format="medium" -1 ${GIT_COMMIT}""", returnStdout:true)
   }
 
   stages {
