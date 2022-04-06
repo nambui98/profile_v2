@@ -4,6 +4,7 @@ pipeline {
 
   environment {
     DOCKER_IMAGE = "nambui98/react-docker"
+    DOCKER_TAG="${GIT_BRANCH}-${GIT_COMMIT}"
   }
 
   stages {
@@ -20,9 +21,8 @@ pipeline {
     // }
 
     stage("build") {
-        environment {
-            DOCKER_TAG="${GIT_BRANCH}-${GIT_COMMIT}"
-        }
+        // agent { node { label 'labelName' } }
+   
         steps {
             sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} . "
             sh "docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest"
