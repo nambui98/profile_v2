@@ -5,7 +5,7 @@ pipeline {
   environment {
     DOCKER_IMAGE = "nambui98/react-docker"
     GIT_BRANCH = "main"
-    GIT_COMMIT = sh(script: "git rev-parse HEAD ", returnStdout: true).trim() 
+    RELEASE_NOTES = sh (script: """git log --format="medium" -1 ${GIT_COMMIT}""", returnStdout:true)
   }
 
   stages {
@@ -23,7 +23,7 @@ pipeline {
 
     stage("build") {
       environment {
-        DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
+        DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${RELEASE_NOTES.substring(0,7)}"
       }
       steps {
         sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} . "
