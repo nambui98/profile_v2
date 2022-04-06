@@ -7,17 +7,17 @@ pipeline {
   }
 
   stages {
-    stage("Test") {
-      agent {
-          docker {
-            image 'node:lts-bullseye-slim' 
-            args '-u root -v /tmp:/root/.cache' 
-          }
-      }
-      steps {
-        sh "npm install"
-      }
-    }
+    // stage("Test") {
+    //   agent {
+    //       docker {
+    //         image 'node:lts-bullseye-slim' 
+    //         args '-u root -v /tmp:/root/.cache' 
+    //       }
+    //   }
+    //   steps {
+    //     sh "npm install"
+    //   }
+    // }
 
     stage("build") {
       agent { node {label 'master'}}
