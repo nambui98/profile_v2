@@ -22,7 +22,7 @@ pipeline {
 
     stage("build") {
       environment {
-        DOCKER_TAG="${GIT_BRANCH}-${GIT_REVISION.substring(0,7)}"
+        DOCKER_TAG="${GIT_BRANCH}-${GIT_REVISION}"
       }
       steps {
         sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} . "
