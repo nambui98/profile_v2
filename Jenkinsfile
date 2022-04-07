@@ -6,7 +6,6 @@ pipeline {
     DOCKER_IMAGE = "nambui98/react-docker"
     DOCKERHUB_CREDENTIALS=credentials('dockerhub')
   }
-
   stages {
     stage("Test") {
       agent {
