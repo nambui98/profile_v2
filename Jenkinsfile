@@ -50,7 +50,8 @@ pipeline {
             sh './sshscript.sh'
             sh "ls"
             // sh "git config --global user.name 'nambui98'"
-            sh "cd src"
+            sh "cd .."
+            sh "git pull"
             sh "npm install"
             // sh "cd profile_v2"
             sh "npm run build"
