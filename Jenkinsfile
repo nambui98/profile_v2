@@ -18,10 +18,10 @@ pipeline {
         sh "npm install"
       }
     }
-    script{
-
-    if(GIT_BRANCH==~ /.*main.*/){
+    
+    // if(GIT_BRANCH==~ /.*main.*/){
       stage("build") {
+          when { branch 'master' }       
           agent { node { label 'master' } }
           environment {
             DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
@@ -41,8 +41,7 @@ pipeline {
               sh "docker image rm ${DOCKER_IMAGE}:latest"
           }
       }
-    }
-    }
+    // }
   }
 
   post {
