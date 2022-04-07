@@ -49,9 +49,9 @@ pipeline {
             sh "chmod +x sshscript.sh"
             sh './sshscript.sh'
             sh "ls"
-            // sh "cd profile_v2"
-            // sh "git pull"
+            sh "git pull"
             // sh "yarn install"
+            // sh "cd profile_v2"
             // sh "yarn run build"
             // sh "cp -r build/* /var/www/html"
           // }
