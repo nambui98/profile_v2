@@ -49,12 +49,12 @@ pipeline {
             sh "chmod +x sshscript.sh"
             sh './sshscript.sh'
             sh "ls"
-            sh "git config --global user.name 'nambui98'"
-            sh "git pull"
-            // sh "yarn install"
+            // sh "git config --global user.name 'nambui98'"
+            sh "cd src"
+            sh "yarn install"
             // sh "cd profile_v2"
-            // sh "yarn run build"
-            // sh "cp -r build/* /var/www/html"
+            sh "yarn run build"
+            sh "cp -r build/* /var/www/html"
           // }
         }
       }
