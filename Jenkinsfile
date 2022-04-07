@@ -51,9 +51,9 @@ pipeline {
             sh "ls"
             // sh "git config --global user.name 'nambui98'"
             sh "cd src"
-            sh "yarn install"
+            sh "npm install"
             // sh "cd profile_v2"
-            sh "yarn run build"
+            sh "npm run build"
             sh "cp -r build/* /var/www/html"
           // }
         }
