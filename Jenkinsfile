@@ -12,7 +12,7 @@ pipeline {
       agent {
           docker {
             image 'node:lts-bullseye-slim' 
-            args '-u root -v /tmp:/root/.cache' 
+            args '-u root' 
           }
       }
       steps {
