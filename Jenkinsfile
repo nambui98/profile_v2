@@ -43,6 +43,7 @@ pipeline {
       }
       stage("deploy"){
         // when { branch 'main' }  
+        agent { node { label 'master' } }
         steps {
           withCredentials([usernamePassword(credentialsId: 'sshpass', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
             sh 'ssh root@139.59.229.139'
