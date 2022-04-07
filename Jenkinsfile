@@ -47,8 +47,7 @@ pipeline {
         steps {
           // withCredentials([usernamePassword(credentialsId: 'sshpass', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
             // sh "cd .."
-            sh "cd /var/jenkins_home/"
-            sh "ls"
+            sh "chmod +x sshscript.sh"
             sh './sshscript.sh'
             sh "cd profile_v2"
             sh "git pull"
