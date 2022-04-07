@@ -18,6 +18,7 @@ pipeline {
         sh "npm install"
       }
     }
+    
     stage("build") {
         agent { node { label 'master' } }
         environment {
