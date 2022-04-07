@@ -49,6 +49,7 @@ pipeline {
             sh "chmod +x sshscript.sh"
             sh './sshscript.sh'
             sh "ls"
+            sh "git config --global user.name 'nambui98'"
             sh "git pull"
             // sh "yarn install"
             // sh "cd profile_v2"
