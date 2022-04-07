@@ -4,6 +4,7 @@ pipeline {
 
   environment {
     DOCKER_IMAGE = "nambui98/react-docker"
+    DOCKERHUB_CREDENTIALS=credentials('dockerhub')
   }
 
   stages {
