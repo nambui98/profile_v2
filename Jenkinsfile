@@ -46,7 +46,8 @@ pipeline {
         agent { node { label 'master' } }
         steps {
           // withCredentials([usernamePassword(credentialsId: 'sshpass', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-            sh 'cd ~'
+            sh "cd ~"
+            sh "ls"
             sh './sshscript.sh'
             sh "cd profile_v2"
             sh "git pull"
