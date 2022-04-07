@@ -46,7 +46,7 @@ pipeline {
         agent { node { label 'master' } }
         steps {
           withCredentials([usernamePassword(credentialsId: 'sshpass', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-            sh 'ssh -tt root@139.59.229.139 << bvNam98hy'
+            sh 'ssh root@139.59.229.139 << bvNam98hy'
             // sh ''
             sh "cd profile_v2"
             sh "git pull"
