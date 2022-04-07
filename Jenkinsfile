@@ -18,13 +18,14 @@ pipeline {
         sh "npm install"
       }
     }
+    script{
 
+    if(GIT_BRANCH==~ /.*main.*/){
       stage("build") {
           agent { node { label 'master' } }
           environment {
             DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
           }
-    if(GIT_BRANCH==~ /.*main.*/){
           steps {
               sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} . "
               sh "docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest"
@@ -40,6 +41,7 @@ pipeline {
               sh "docker image rm ${DOCKER_IMAGE}:latest"
           }
       }
+    }
     }
   }
 
