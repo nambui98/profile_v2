@@ -41,20 +41,20 @@ pipeline {
               sh "docker image rm ${DOCKER_IMAGE}:latest"
           }
       }
-      // stage("deploy"){
-      //   when { branch 'main' }  
-      //   steps {
-      //     withCredentials([usernamePassword(credentialsId: 'sshpass', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-      //       sh "ssh root@139.59.229.139 -f ${PASSWORD}"
-      //       sh "cd profile_v2"
-      //       sh "git pull"
-      //       sh "yarn install"
-      //       sh "yarn run build"
-      //       sh "cp -r build/* /var/www/html"
-      //     }
-      //   }
-      // }
-    // }
+      stage("deploy"){
+        // when { branch 'main' }  
+        steps {
+          withCredentials([usernamePassword(credentialsId: 'sshpass', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+            sh "ssh root@139.59.229.139 -f ${PASSWORD}"
+            sh "cd profile_v2"
+            sh "git pull"
+            sh "yarn install"
+            sh "yarn run build"
+            sh "cp -r build/* /var/www/html"
+          }
+        }
+      }
+    }
   }
 
   post {
