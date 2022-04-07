@@ -5,7 +5,7 @@ FROM node:alpine as builder
 COPY package.json package-lock.json ./
 
 # Install the dependencies and make the folder
-RUN npm install && mkdir /react-ui && mv ./node_modules ./react-ui
+RUN npm install && npm install -g npm@8.6.0 && mkdir /react-ui && mv ./node_modules ./react-ui
 
 WORKDIR /react-ui
 
