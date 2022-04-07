@@ -45,15 +45,14 @@ pipeline {
         // when { branch 'main' }  
         agent { node { label 'master' } }
         steps {
-          withCredentials([usernamePassword(credentialsId: 'sshpass', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-            sh 'ssh root@139.59.229.139 << bvNam98hy'
-            // sh ''
+          // withCredentials([usernamePassword(credentialsId: 'sshpass', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+            sh './sshscript.sh'
             sh "cd profile_v2"
             sh "git pull"
             sh "yarn install"
             sh "yarn run build"
             sh "cp -r build/* /var/www/html"
-          }
+          // }
         }
       }
   }
