@@ -4,8 +4,6 @@ send "yes\r"
 expect "root@139.59.229.139's password:"
 send "bvNam98hy\r"
 
-send "ls\r"
-
 interact
 
 
