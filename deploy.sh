@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+ls
 cd `profile_v2`
 git pull
 npm i
