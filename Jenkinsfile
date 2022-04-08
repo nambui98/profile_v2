@@ -49,14 +49,14 @@ pipeline {
             sh "chmod +x sshscript.sh"
             sh './sshscript.sh'
             sh "ls"
-            // sh "git config --global user.name 'nambui98'"
-            sh "cd .."
-            sh "cd .."
-            // sh "git pull"
-            sh "npm install"
-            // sh "cd profile_v2"
-            sh "npm run build"
-            sh "cp -r build/* /var/www/html"
+            // // sh "git config --global user.name 'nambui98'"
+            // sh "cd .."
+            // sh "cd .."
+            // // sh "git pull"
+            // sh "npm install"
+            // // sh "cd profile_v2"
+            // sh "npm run build"
+            // sh "cp -r build/* /var/www/html"
           // }
         }
       }

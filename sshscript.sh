@@ -4,4 +4,4 @@ send "yes\r"
 expect "Password:*"
 send "bvNam98hy\r"
 expect "$ "
-interact
+send "./deploy.sh"
