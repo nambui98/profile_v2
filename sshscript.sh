@@ -5,7 +5,7 @@ expect "Password:*"
 send "bvNam98hy\r"
 expect "$ "
 expect << EOF
- send [ls]
+ send "ls\r"
 EOF
 interact
 
