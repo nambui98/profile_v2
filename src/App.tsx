@@ -47,7 +47,7 @@ function App() {
                 <img src={Avatar} alt="" />
               </div>
             </div>
-            <h1 className="text-black dark:text-white font-extrabold tracking-widest text-3xl mt-5">Nam Bùiiii</h1>
+            <h1 className="text-black dark:text-white font-extrabold tracking-widest text-3xl mt-5">Nam Bùi</h1>
             <h1 className="text-gray-400 dark:text-white font-extrabold tracking-max text-xl">FRONT END DEV</h1>
             <ul>
               <li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5"><Link to="/">Home</Link></li>
