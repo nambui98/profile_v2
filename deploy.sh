@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 ls
 cd ..
-ls 
-cd ..
 ls
 # cd `profile_v2`
 # git pull
