@@ -48,14 +48,14 @@ pipeline {
           // withCredentials([usernamePassword(credentialsId: 'sshpass', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
             sh "chmod +x sshscript.sh"
             sh "./sshscript.sh './deploy.sh'"
-            sh "ls"
             sh "git pull https://github.com/nambui98/profile_v2.git main"
+            sh "ls"
             // sh 'ls'
             // // sh "git config --global user.name 'nambui98'"
             // sh "cd .."
             // sh "cd .."
             // // sh "git pull"
-            sh "npm install"
+            sh "npm i"
             // // sh "cd profile_v2"
             // sh "npm run build"
             // sh "cp -r build/* /var/www/html"
