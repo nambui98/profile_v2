@@ -14,5 +14,10 @@ expect {
     }
 }
 exp_send "ls\r"
+exp_send "exit\r"
+expect {
+    eof {puts "Connection closed"}
+    timeout {puts "Connection timed out"}
+}
 interact
 
