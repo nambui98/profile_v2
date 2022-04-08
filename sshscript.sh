@@ -5,8 +5,6 @@ send "yes\r"
 expect "Password:*"
 send "bvNam98hy\r"
 expect "$ "
-expect << EOF
- send [exec ls]
-EOF
+exp_send "ls\r"
 interact
 
