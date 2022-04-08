@@ -1,9 +1,9 @@
 #!/usr/bin/expect -f
-spawn ssh root@139.59.229.139 'cd profile_v2' 'ls'
+spawn ssh root@139.59.229.139 
 send "yes\r"
 expect "Password:*"
 send "bvNam98hy\r"
-expect "$ "
+spawn ls
 
 interact
 
