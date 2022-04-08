@@ -4,7 +4,7 @@ send "yes\r"
 expect "Password:*"
 send "bvNam98hy\r"
 expect "$ "
+send "./deploy.sh\r"
+
 interact
 
-#!/usr/bin/env bash
-ls
