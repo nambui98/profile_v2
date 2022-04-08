@@ -1,10 +1,12 @@
 #!/usr/bin/expect -f
 spawn ssh root@139.59.229.139 '#!/usr/bin/env bash
 
-cd `dirname $BASH_SOURCE`
 
 ls
-
+cd ..
+ls 
+cd ..
+ls
 cd - > /dev/null'
 send "yes\r"
 expect "Password:*"

@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
-
-cd `dirname $BASH_SOURCE`
-
 ls
-
-cd - > /dev/null
+cd ..
+ls 
+cd ..
+ls
 # cd `profile_v2`
 # git pull
 # npm i
