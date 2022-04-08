@@ -5,6 +5,4 @@ expect "Password:*"
 send "bvNam98hy\r"
 expect "$ "
 interact
-#!/usr/bin/env bash
-ls
 

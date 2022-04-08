@@ -48,8 +48,9 @@ pipeline {
           // withCredentials([usernamePassword(credentialsId: 'sshpass', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
             sh "chmod +x sshscript.sh"
             sh "./sshscript.sh"
-            // sh './deploy.sh'
             // sh "ls"
+            sh './deploy.sh'
+            sh 'ls'
             // // sh "git config --global user.name 'nambui98'"
             // sh "cd .."
             // sh "cd .."
