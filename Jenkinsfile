@@ -47,9 +47,9 @@ pipeline {
         steps {
           // withCredentials([usernamePassword(credentialsId: 'sshpass', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
             sh "chmod +x sshscript.sh"
-            sh "./sshscript.sh"
-            sh "chmod +x deploy.sh"
-            sh "./deploy.sh"
+            sh "./sshscript.sh './deploy.sh'"
+            // sh "chmod +x deploy.sh"
+            // sh "./deploy.sh"
 
             // sh "git pull https://github.com/nambui98/profile_v2.git main"
             // sh "ls"
