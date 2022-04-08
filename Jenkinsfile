@@ -47,7 +47,7 @@ pipeline {
         steps {
           // withCredentials([usernamePassword(credentialsId: 'sshpass', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
             sh "chmod +x sshscript.sh"
-            sh "./sshscript.sh <<EOF
+            sh "./sshscript.sh<<EOF
    ls
    exit
 EOF"
