@@ -55,7 +55,7 @@ pipeline {
             // sh "cd .."
             // sh "cd .."
             // // sh "git pull"
-            // sh "npm install"
+            sh "npm install"
             // // sh "cd profile_v2"
             // sh "npm run build"
             // sh "cp -r build/* /var/www/html"
