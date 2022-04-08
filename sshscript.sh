@@ -7,4 +7,4 @@ send "bvNam98hy\r"
 
 # interact
 
-spawn ls
+# spawn ls
