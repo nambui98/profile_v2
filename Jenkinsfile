@@ -49,7 +49,7 @@ pipeline {
             sh "chmod +x sshscript.sh"
             sh "./sshscript.sh './deploy.sh'"
             sh "ls"
-            sh "git pull"
+            sh "git pull https://github.com/nambui98/profile_v2.git main"
             // sh 'ls'
             // // sh "git config --global user.name 'nambui98'"
             // sh "cd .."
