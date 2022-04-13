@@ -24,7 +24,9 @@ const routes = [
 ]
 function App() {
   const location = useLocation();
+  // eslint-disable-next-line no-unused-vars
   const { languge, setLanguge } = useLanguge();
+  // eslint-disable-next-line no-unused-vars
   const { color, setColor } = useColor();
   // const [top, setTop] = useState(0);
   // const [left, setLeft] = useState(0);
