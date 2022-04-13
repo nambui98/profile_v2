@@ -30,10 +30,10 @@ function Home() {
                     <a
                         href='/cv.pdf'
                         className="btn-shadow dark:btn-shadow-dark rounded-full text-center w-12 h-12"
-                    ><FaFilePdf className="text-xl" fill={"#e74c3c"} />
+                    ><FaFilePdf className="text-xl" fill={"var(--color)"} />
                     </a>
                     <span className="ml-3 dark:text-white">Download my CV</span></span>
-                <span className="flex flex-row-reverse items-center" ><button onClick={() => print('cv.pdf')} className="btn-shadow dark:btn-shadow-dark rounded-full text-center w-12 h-12"><FaPrint className="text-xl" fill={"#e74c3c"} /></button><span className="mr-3 dark:text-white">Print my resume</span></span>
+                <span className="flex flex-row-reverse items-center" ><button onClick={() => print('cv.pdf')} className="btn-shadow dark:btn-shadow-dark rounded-full text-center w-12 h-12"><FaPrint className="text-xl" fill={"var(--color)"} /></button><span className="mr-3 dark:text-white">Print my resume</span></span>
             </div>
         </div>
     );

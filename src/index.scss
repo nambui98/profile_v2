@@ -10,10 +10,31 @@ body{
     // cursor: none;
     overflow: hidden;
 }
+
 @layer utilities { 
+    .scrollbar {
+        &::-webkit-scrollbar{
+            width: 7px;
+        }
+        &::-webkit-scrollbar-track{
+            background: #f1f1f1;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #a5a5a5;
+            border-radius: 10px;
+        }
+// &::-webkit-scrollbar-thumb:hover {
+//   background: #555;
+// }
+    }
+
+    // .scrollbar {
+    //     -ms-overflow-style: none; /* IE and Edge */
+    //     scrollbar-width: none; /* Firefox */
+    // }
     .btn-shadow{
     box-shadow: 3px 3px 3px #cbced1,
-             -3px -3px 3px #fafafa;
+            -3px -3px 3px #fafafa;
     // width: 50px;
     // height: 50px;
     cursor: pointer;
@@ -72,7 +93,7 @@ body{
                 opacity: 1;
             }
             svg{
-                fill: #e74c3c;
+                fill: var(--color);
             }
         }
     } 
@@ -93,7 +114,7 @@ body{
             opacity: 1;
         }
         svg{
-            fill: #e74c3c;
+            fill: var(--color);
         }
     }
     &-dark{
@@ -285,6 +306,33 @@ body{
 .t-8{
     top:2rem;
 }
+.border{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius:20px;
+    
+    box-shadow: 
+    inset 3px 3px 3px #a7aaaf,
+    inset -3px -3px 3px #fff;
+    &-dark{
+        box-shadow: inset 3px 3px 3px #202020, inset -3px -3px 3px #2c2c2c;
+        img, iframe, &-insite{
+            box-shadow: 3px 3px 3px #202020,
+            -3px -3px 3px #2c2c2c;
+        }
+    }
+    img, iframe, &-insite{
+        // width: 180px;
+        // height: 180px;
+        object-fit: cover;
+        border-radius: 20px;
+        box-shadow: 
+        3px 3px 3px #a7aaaf,
+        -3px -3px 3px #fff
+    }
+}
 }
 .bg-app{
     background-color: #ecf0f3;
@@ -360,3 +408,38 @@ body{
 //     pointer-events: none;
 //     transition: .2s all;
 // }
+
+
+.settingcolor{
+    transition: all .3s;
+    &.active{
+        border: 1px solid var(--color);
+        position: relative;
+        background-color: transparent;
+        &::before{
+            content:"";
+            position: absolute;
+            inset: 3px;
+            background-color: var(--color);
+            border-radius: .5rem;
+        }
+    }
+}
+.color1{
+    background-color: #1abc9c;
+}
+.color2{
+    background-color: #3498db;
+}
+.color3{
+    background-color: #e74c3c;
+}
+.color4{
+    background-color: #8e44ad;
+}
+.color5{
+    background-color: #2c3e50;
+}
+.color6{
+    background-color: #f1c40f;
+}
