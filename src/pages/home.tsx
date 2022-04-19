@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { FaFacebookF, FaFilePdf, FaGoogle, FaInstagramSquare, FaPrint } from "react-icons/fa";
+import { T } from 'react-polyglot-hooks';
 
 const colors = require('tailwindcss/colors')
 function Home() {
@@ -31,8 +32,8 @@ function Home() {
                         className="btn-shadow dark:btn-shadow-dark rounded-full text-center w-12 h-12"
                     ><FaFilePdf className="text-xl" fill={"var(--color)"} />
                     </a>
-                    <span className="ml-2 dark:text-white">Download my CV</span></span>
-                <span className="flex flex-row-reverse smx:flex-row smx:mt-2 items-center" ><button onClick={() => print('cv.pdf')} className="btn-shadow dark:btn-shadow-dark rounded-full text-center w-12 h-12"><FaPrint className="text-xl" fill={"var(--color)"} /></button><span className="mr-2 smx:ml-2 dark:text-white">Print my resume</span></span>
+                    <span className="ml-2 dark:text-white"><T phrase='downloadcv' /></span></span>
+                <span className="flex flex-row-reverse smx:flex-row smx:mt-2 items-center" ><button onClick={() => print('cv.pdf')} className="btn-shadow dark:btn-shadow-dark rounded-full text-center w-12 h-12"><FaPrint className="text-xl" fill={"var(--color)"} /></button><span className="mr-2 smx:ml-2 dark:text-white"><T phrase='printmyresum' /></span></span>
             </div>
         </div>
     );
