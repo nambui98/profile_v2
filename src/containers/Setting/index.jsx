@@ -31,7 +31,7 @@ export default function Setting() {
                     />
                 )}
             </button>
-            <button className="top-6 right-6 border lg:w-12 h-12 dark:border-dark rounded-3xl" onClick={() => { setLanguge(languge === "vn" ? "en" : "vn") }}>
+            <button className="top-6 right-6 border w-12 h-12 dark:border-dark rounded-3xl" onClick={() => { setLanguge(languge === "vn" ? "en" : "vn") }}>
                 <img className='w-[calc(100%_-_10px)] h-[calc(100%_-_10px)]' src={languge === "vn" ? vietnamimg : usaimg} alt="" />
             </button>
             <div className="border w-full h-[160px] mt-3 dark:border-dark">

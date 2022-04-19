@@ -1,8 +1,7 @@
 import React from 'react';
-import { Routes, Route, Link, useLocation } from "react-router-dom";
-import { FaFacebookF, FaFilePdf, FaGoogle, FaInstagram, FaInstagramSquare, FaPrint, FaRegSun } from "react-icons/fa";
 
-import { Avatar } from '../assets';
+import { FaFacebookF, FaFilePdf, FaGoogle, FaInstagramSquare, FaPrint } from "react-icons/fa";
+
 const colors = require('tailwindcss/colors')
 function Home() {
     const print = (pdf: string) => {
@@ -25,15 +24,15 @@ function Home() {
                 <a href='https://www.instagram.com/nambui27/' target="_blank" rel="noreferrer" className="btn-shadow dark:btn-shadow-dark itg rounded-full text-center w-14 h-14 mx-5"><FaInstagramSquare className="text-3xl" fill={colors.coolGray[400]} /></a>
                 <a href='mailto:bvnam98@gmail.com' target="_blank" rel="noreferrer" className="btn-shadow dark:btn-shadow-dark gg rounded-full text-center w-14 h-14"><FaGoogle className="text-3xl" fill={colors.coolGray[400]} /></a>
             </div>
-            <div className="absolute bottom-10 2xl:right-20 2xl:left-20 md:right-10 md:left-10 flex items-center justify-between">
-                <span className="flex items-center">
+            <div className="absolute bottom-10 2xl:right-20 2xl:left-20 md:right-10 md:left-10 flex items-center smx:flex-col justify-between">
+                <span className="flex items-center ">
                     <a
                         href='/cv.pdf'
                         className="btn-shadow dark:btn-shadow-dark rounded-full text-center w-12 h-12"
                     ><FaFilePdf className="text-xl" fill={"var(--color)"} />
                     </a>
-                    <span className="ml-3 dark:text-white">Download my CV</span></span>
-                <span className="flex flex-row-reverse items-center" ><button onClick={() => print('cv.pdf')} className="btn-shadow dark:btn-shadow-dark rounded-full text-center w-12 h-12"><FaPrint className="text-xl" fill={"var(--color)"} /></button><span className="mr-3 dark:text-white">Print my resume</span></span>
+                    <span className="ml-2 dark:text-white">Download my CV</span></span>
+                <span className="flex flex-row-reverse smx:flex-row smx:mt-2 items-center" ><button onClick={() => print('cv.pdf')} className="btn-shadow dark:btn-shadow-dark rounded-full text-center w-12 h-12"><FaPrint className="text-xl" fill={"var(--color)"} /></button><span className="mr-2 smx:ml-2 dark:text-white">Print my resume</span></span>
             </div>
         </div>
     );
