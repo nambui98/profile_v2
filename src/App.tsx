@@ -1,7 +1,6 @@
 import React from 'react';
-import { I18n } from 'react-polyglot-hooks';
+import { I18n, T } from 'react-polyglot-hooks';
 import { Link, Route, Routes, useLocation } from 'react-router-dom';
-import { T } from 'react-polyglot-hooks';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import './App.scss';
 import { Avatar } from './assets';
