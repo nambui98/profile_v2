@@ -6,7 +6,6 @@ import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from './containers/ThemeContext';
 import { LangugeProvider } from './containers/LanguageContext';
 import Background from './containers/Background';
-import Toggle from './containers/ThemeToggle';
 import Setting from './containers/Setting';
 import { Example } from './components/menu/example';
 import { BrowserRouter } from 'react-router-dom';

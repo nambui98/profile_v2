@@ -1,8 +1,9 @@
 import React from 'react';
+import './App.scss';
+import 'boxicons/css/boxicons.min.css'
 import { I18n, T } from 'react-polyglot-hooks';
 import { Link, Route, Routes, useLocation } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import './App.scss';
 import { Avatar } from './assets';
 import Contact from './pages/contact';
 import Home from './pages/home';
@@ -12,6 +13,7 @@ import vn from './settings/language/vn';
 import { useLanguge } from './containers/LanguageContext';
 import Bubbles from './components/bubbles/Bubbles';
 import { useColor } from './containers/ColorsContext';
+import Skills from './pages/Skills';
 
 // ... or any ways to determine current locale
 
@@ -20,6 +22,7 @@ const routes = [
   { path: '/', name: 'Home', Component: <Home /> },
   { path: '/contact', name: 'Contact', Component: <Contact /> },
   { path: '/work', name: 'Work', Component: <Work /> },
+  { path: '/skills', name: 'Skills', Component: <Skills /> },
 ]
 function App() {
   const location = useLocation();
@@ -67,18 +70,19 @@ function App() {
               <h1 className="text-black dark:text-white font-extrabold tracking-widest text-3xl mt-5">Nam Bùi</h1>
               <h1 className="text-gray-400 dark:text-white font-extrabold tracking-max text-xl">FRONT END DEV</h1>
               <ul>
-                <li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5"><Link to="/"><T phrase="home" /></Link></li>
-                <li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5"><Link to="/work"><T phrase="work" /></Link></li>
-                <li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5"><a href="https://namportfolio.netlify.app/" target="_blank" rel="noreferrer">Portfolio</a> </li>
-                <li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5"><a href="https://web3-blog.netlify.app/" target="_blank" rel="noreferrer">Blog</a> </li>
-                <li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5"><Link to="/contact">Contact</Link> </li>
+                {/* <i className="bx bx-hot"></i> */}
+                <li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5"><Link to="/"><i className='bx bxs-home-alt-2' ></i><T phrase="home" /></Link></li>
+                <li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5"><Link to="/work"><i className='bx bxs-briefcase' ></i><T phrase="work" /></Link></li>
+                <li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5"><Link to="/skills"><i className='bx bxs-archive' ></i><T phrase="skill" /></Link> </li>
+                <li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5"><a href="https://web3-blog.netlify.app/" target="_blank" rel="noreferrer"><i className='bx bxl-blogger' ></i><T phrase="blog" /></a> </li>
+                <li className="text-gray-600 dark:text-white font-bold btn-shadow dark:btn-shadow-dark w-48 h-10 rounded-2xl mt-5"><Link to="/contact"><i className='bx bxs-contact' ></i><T phrase="contact" /></Link> </li>
               </ul>
             </div>
 
           </div>
         </div>
       </div>
-    </I18n>
+    </I18n >
   );
 }
 

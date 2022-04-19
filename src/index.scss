@@ -56,8 +56,14 @@ body{
         width: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        // justify-content: center;
         z-index: 100;
+        padding: 0 30px;
+        i{
+            margin-right: 20px;
+            color:var(--color);
+            font-size: 20px;
+        }
     }
     &::after{
         content: '';
