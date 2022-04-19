@@ -1,6 +1,5 @@
 import React from 'react'
 import reactjs from '../assets/img/reactjs.png'
-import reactnative from '../assets/img/reactnative.png'
 import nextjs from '../assets/img/nextjs.png'
 import flutter from '../assets/img/flutter.png'
 import tailwind from '../assets/img/Tailwind.png'
