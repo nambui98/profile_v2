@@ -33,10 +33,22 @@ export const MenuItem = ({ i, item, toggle }) => {
       whileTap={{ scale: 0.95 }}
 
     >
-      {/* <div className="icon-placeholder" style={style} /> */}
       {
-        item.path === "/https://web3-blog.netlify.app/" ? <a className="text-placeholder dark:text-white" style={style} href="https://web3-blog.netlify.app/" target="_blank" rel="noreferrer"><T phrase={item.name} /></a> :
-          <Link to={item.path} onClick={toggle}><div className="text-placeholder dark:text-white" style={style}><T phrase={item.name} /></div></Link>
+        item.path === "/https://web3-blog.netlify.app/" ?
+          <a
+            className="text-placeholder dark:text-white"
+            style={style}
+            href="https://web3-blog.netlify.app/"
+            target="_blank" rel="noreferrer">
+            <T phrase={item.name} />
+          </a> : item.name === "nam bv" ? <div className="wrap-avatar dark:wrap-avatar-dark">
+            <div className="avatar">
+              <img src={item.path} alt="" />
+            </div>
+          </div> :
+
+            <Link to={item.path} onClick={toggle}><div className="text-placeholder dark:text-white" style={style}><T phrase={item.name} /></div></Link>
+
       }
     </motion.li>
   );

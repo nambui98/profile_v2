@@ -9,6 +9,10 @@
 body{
     // cursor: none;
     overflow: hidden;
+    position: relative;
+}
+#root{
+
 }
 
 @layer utilities { 
@@ -271,6 +275,7 @@ body{
     }      
 }
 .wrap-avatar{
+    outline:none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -417,6 +422,7 @@ body{
 
 
 .settingcolor{
+    outline: none;
     transition: all .3s;
     &.active{
         border: 1px solid var(--color);

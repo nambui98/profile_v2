@@ -12,8 +12,9 @@ import en from './settings/language/en';
 import vn from './settings/language/vn';
 import { useLanguge } from './containers/LanguageContext';
 import Bubbles from './components/bubbles/Bubbles';
-import { useColor } from './containers/ColorsContext';
+
 import Skills from './pages/Skills';
+import { Example } from './components/menu/example';
 
 // ... or any ways to determine current locale
 
@@ -27,17 +28,7 @@ const routes = [
 function App() {
   const location = useLocation();
   // eslint-disable-next-line no-unused-vars
-  const { languge, setLanguge } = useLanguge();
-  // eslint-disable-next-line no-unused-vars
-  const { color, setColor } = useColor();
-  // const [top, setTop] = useState(0);
-  // const [left, setLeft] = useState(0);
-  // useEffect(() => {
-  //   window.addEventListener("mousemove", (e) => {
-  //     setTop(e.pageY);
-  //     setLeft(e.pageX);
-  //   })
-  // }, [])
+  const { languge } = useLanguge();
   // You can put translations in separate files
   const phrases: any = {
     en: en,
@@ -46,9 +37,11 @@ function App() {
   return (
     <I18n locale={languge} phrases={phrases[languge]}>
       <Bubbles />
-      <div className="App">
+
+      <div className="App relative">
+        <Example />
         {/* <div className="cursor" style={{ top: top, left: left }}></div> */}
-        <div className="flex h-screen w-screen items-center justify-center">
+        <div className="flex h-screen w-screen items-center justify-center relative">
           <div className="flex w-full items-start justify-center" style={{ height: "600px" }}>
             <TransitionGroup component={null}>
 

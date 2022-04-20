@@ -5,6 +5,7 @@ import { I18n } from "react-polyglot-hooks";
 import en from "../../settings/language/en";
 import vn from "../../settings/language/vn";
 import { useLanguge } from "../../containers/LanguageContext";
+import { Avatar } from "../../assets";
 
 const variants = {
   open: {
@@ -26,6 +27,7 @@ export const Navigation = ({ toggle }) => {
       {itemIds.map((item, index) => (
         <MenuItem i={index} key={index} item={item} toggle={toggle} />
       ))}
+
     </motion.ul>
   </I18n>
 };
@@ -51,4 +53,8 @@ const itemIds = [
     path: "/contact",
     name: "contact"
   },
+  {
+    path: Avatar,
+    name: "nam bv"
+  }
 ];
