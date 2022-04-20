@@ -1,6 +1,10 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import { MenuItem } from "./menuItem";
+import { I18n } from "react-polyglot-hooks";
+import en from "../../settings/language/en";
+import vn from "../../settings/language/vn";
+import { useLanguge } from "../../containers/LanguageContext";
 
 const variants = {
   open: {
@@ -10,34 +14,41 @@ const variants = {
     transition: { staggerChildren: 0.05, staggerDirection: -1 }
   }
 };
+const phrases = {
+  en: en,
+  vn: vn,
+};
+export const Navigation = ({ toggle }) => {
+  const { languge } = useLanguge();
+  return <I18n locale={languge} phrases={phrases[languge]}>
 
-export const Navigation = () => (
-  <motion.ul className="" variants={variants}>
-    {itemIds.map((item, index) => (
-      <MenuItem i={index} key={index} item={item} />
-    ))}
-  </motion.ul>
-);
+    <motion.ul className="" variants={variants}>
+      {itemIds.map((item, index) => (
+        <MenuItem i={index} key={index} item={item} toggle={toggle} />
+      ))}
+    </motion.ul>
+  </I18n>
+};
 
 const itemIds = [
   {
     path: "/",
-    name: "Home"
+    name: "home"
   },
   {
-    path: "/",
-    name: "About"
+    path: "/work",
+    name: "work"
   },
   {
-    path: "/",
-    name: "Portfolio"
+    path: "/skills",
+    name: "skill"
   },
   {
-    path: "/",
-    name: "Blog"
+    path: "/https://web3-blog.netlify.app/",
+    name: "blog"
   },
   {
-    path: "/",
-    name: "Contact"
+    path: "/contact",
+    name: "contact"
   },
 ];

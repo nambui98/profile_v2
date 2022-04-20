@@ -38,7 +38,6 @@ export const ColorProvider = ({ initialColor, children }: any) => {
 
     useEffect(() => {
         rawSetColor(color);
-        debugger
         const root = document.documentElement;
         root?.style.setProperty(
             "--color",
