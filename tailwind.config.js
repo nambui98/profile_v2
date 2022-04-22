@@ -17,6 +17,7 @@ module.exports = {
     boxShadow: {
       '3xl': '3px 3px 3px #cbced1, -3px -3px 3px #fafafa',
       '3xl-dark': '3px 3px 3px #202020,-3px -3px 3px #2c2c2c ',
+      '3xl-inset': 'inset -3px -3px 3px #cbced1,inset 3px 3px 3px #fafafa',
       'btn-shadow': '3px 3px 3px #cbced1, -3px -3px 3px #fafafa',
       'btn-shadow-5xl': '3px 3px 3px #cbced1, -3px -3px 3px #fafafa',
       '4xl': '3px 3px 3px #cbced1, -3px -3px 3px #fafafa',

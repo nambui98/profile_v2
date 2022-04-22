@@ -5,8 +5,8 @@ type Props = {}
 const Loading = (props: Props) => {
     return (
         <div className="case__loading">
-            <div className="big__circle">
-                <div className="inner__circle"></div>
+            <div className="loading dark:loading--dark">
+                <div className="inner__loading dark:inner__loading--dark"></div>
                 <div className="loader">
                     <svg className="circular" viewBox="25 25 50 50">
                         <defs>
