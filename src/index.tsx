@@ -1,14 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { ThemeProvider } from './containers/ThemeContext';
-import { LangugeProvider } from './containers/LanguageContext';
-import Background from './containers/Background';
-import Setting from './containers/Setting';
 import { BrowserRouter } from 'react-router-dom';
+import App from './App';
 import { ColorProvider } from './containers/ColorsContext';
+import { LangugeProvider } from './containers/LanguageContext';
+import { ThemeProvider } from './containers/ThemeContext';
+import './index.scss';
+import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -17,12 +15,7 @@ ReactDOM.render(
       <ThemeProvider>
         <LangugeProvider>
           <ColorProvider>
-            <Background>
-              <div className="fixed right-0 top-0 mr-4 mt-2 md:mt-6 z-10">
-                <Setting />
-              </div>
-              <App />
-            </Background>
+            <App />
           </ColorProvider>
         </LangugeProvider>
       </ThemeProvider>

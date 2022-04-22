@@ -6,12 +6,7 @@ module.exports = {
   darkMode: 'class',
   theme: {
     screens: {
-
-      // 'md': { 'max': '767px' },
-      // => @media (max-width: 767px) { ... }
-
       'smx': { 'max': '639px' },
-      // => @media (max-width: 639px) { ... }
       ...defaultTheme.screens,
     },
     extend: {},

@@ -12,7 +12,12 @@ body{
     position: relative;
 }
 #root{
-
+    --color1: #1abc9ca2;
+--color2: #3498dba2;
+--color3: #e74c3ca2;
+--color4: #8e44ada2;
+--color5: #2c3e50a2;
+--color6: #f1c40fa2;
 }
 
 @layer utilities { 
