@@ -13,7 +13,7 @@ export default function contact() {
                     <p className="text-black dark:text-white text-xl text-left font-bold">Mail: <span className='font-normal'>bvnam98@gmail.com</span> </p>
                 </div>
             </div>
-            <div className="absolute top-[3.5rem] right-[3rem] border lg:w-[100px] h-[100px] md:w-full mb-5 dark:border-dark">
+            <div className="absolute top-[3.5rem] right-[3rem] border lg:w-[100px] h-[100px] lg:flex md:hidden mb-5 smx:hidden dark:border-dark">
                 <img className='w-[calc(100%_-_15px)] h-[calc(100%_-_15px)] !object-contain' src={nhan} alt="" />
             </div>
             <div className="border w-full h-[350px] mt-5 mb-5 dark:border-dark">
