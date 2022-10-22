@@ -1,5 +1,7 @@
 import React, { Suspense } from 'react'
 import IOK from '../assets/img/iok.png'
+import Befitter from '../assets/img/befitter.png'
+import BefitterApp from '../assets/img/befitter_app.jpg'
 import vtva from '../assets/img/vtva.png'
 import bavinn from '../assets/img/bavinn.png'
 import nft from '../assets/img/nft.png'
@@ -12,9 +14,22 @@ type item = {
     title: string,
     link: string,
     image: string,
+    type?: string
 }
 export default function Work(props: Props) {
     const data: item[] = [
+        {
+            title: "Befitter app",
+            link: "http://cdn.befitter.io/downloadapp/ ",
+            image: BefitterApp,
+            type: 'mobile'
+        },
+
+        {
+            title: "Befitter website",
+            link: "https://befitter.io/",
+            image: Befitter
+        },
         {
             title: "Iok chương trình thi topik online",
             link: "https://iok.vn",
@@ -59,9 +74,12 @@ export default function Work(props: Props) {
                 {/* <img className="w-full" src={IOK} alt="Sunset in the mountains" /> */}
                 <div className='w-full h-[calc(100%_-_40px)] overflow-y-auto flex justify-between flex-wrap scrollbar'>
                     {
-                        data.map(item => <a href={item.link} title={item.title} target="_blank" rel="noreferrer" className="border lg:w-[calc(50%_-_10px)] md:w-full mb-5 dark:border-dark">
-                            <img className='w-[calc(100%_-_20px)] h-[calc(100%_-_20px)]' src={item.image} alt="" />
-                        </a>)
+                        data.map((item, index) => <>
+                            <a href={item.link} title={item.title} target="_blank" rel="noreferrer" className="border lg:w-[calc(50%_-_10px)] w-full mb-5 dark:border-dark h-[240px]">
+                                <img className={`w-[calc(100%_-_20px)] h-[calc(100%_-_20px)] ${item.type === "mobile" ? '!object-contain' : ''}`} src={item.image} alt="" />
+                            </a>
+
+                        </>)
                     }
                 </div>
             </div>
